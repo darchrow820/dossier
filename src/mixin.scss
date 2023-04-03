@@ -1,0 +1,17 @@
+// fonts
+
+@mixin r {
+	font-family: "Raleway Regular", sans-serif;
+	font-weight: 400;
+}
+
+@mixin b {
+	font-family: "Raleway Bold", sans-serif;
+	font-weight: 700;
+}
+
+@mixin t {
+	font-family: "Raleway Italic", sans-serif;
+	font-weight: 400;
+	font-style: italic;
+}
