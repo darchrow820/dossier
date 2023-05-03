@@ -1,5 +1,5 @@
 // import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import { BrowserRouter } from 'react-router-dom'
 import Navbar from './components/Navbar/navbar'
 import Approuter from './components/AppRouter/Approuter'
@@ -12,7 +12,7 @@ function App() {
         <Navbar />
         <Approuter />
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <Search />
+        {/* <Search /> */}
       </div>
     </BrowserRouter>
   );

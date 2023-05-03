@@ -1,0 +1,25 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background-color: #00c3ad;
+}
+.navbar .navbar__login {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.navbar .navbar__button {
+  font-family: "Raleway Bold", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+  width: 80px;
+  padding: 8px 0;
+  border: none;
+  border-radius: 8px;
+  background: #c000d7;
+  cursor: pointer;
+}/*# sourceMappingURL=Navbar.module.css.map */
