@@ -9,14 +9,14 @@ const Approuter = () => {
 	const user = false;
 	return user ? (
 		<Routes>
-			{/* {privateRoutes.map(({ path, Component }) =>
-				<Route path={path} element={Component} exact={true} />)} */}
+			{privateRoutes.map(({ path, Component }) =>
+				<Route path={path} element={Component} exact={true} />)}
 			<Route path="*" element={<Navigate to={MAIN_ROUTE} />} />
 		</Routes>
 	) : (
 		<Routes>
-			{/* {publicRoutes.map(({ path, Component }) =>
-				<Route path={path} element={Component} exact={true} />)} */}
+			{publicRoutes.map(({ path, Component }) =>
+				<Route path={path} element={Component} exact={true} />)}
 			<Route path="*" element={<Navigate to={LOGIN_ROUTE} />} />
 		</Routes>
 	);
