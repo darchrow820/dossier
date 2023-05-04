@@ -1,0 +1,64 @@
+/* @font-face {
+	font-family: "Raleway Regular", sans-serif;
+	src: url("./fonts/Raleway-Regular.ttf") format("ttf");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Raleway Bold", sans-serif;
+	src: url("./fonts/Raleway-Bold.ttf") format("ttf");
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Raleway Italic", sans-serif;
+	src: url("./fonts/Raleway-Italic.ttf") format("ttf");
+	font-weight: 400;
+	font-style: italic;
+} */
+
+@font-face {
+	font-family: "NoirPro-Regular";
+	src: url("./fonts/NoirPro-Regular.eot");
+	src: url("./fonts/NoirPro-Regular.eot?#iefix") format("embedded-opentype"),
+		url("./fonts/NoirPro-Regular.woff") format("woff"),
+		url("./fonts/NoirPro-Regular.woff2") format("woff2"),
+		url("./fonts/NoirPro-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "NoirPro-Italic";
+	src: url("./fonts/NoirPro-Italic.eot");
+	src: url("./fonts/NoirPro-Italic.eot?#iefix") format("embedded-opentype"),
+		url("./fonts/NoirPro-Italic.woff") format("woff"),
+		url("./fonts/NoirPro-Italic.woff2") format("woff2"),
+		url("./fonts/NoirPro-Italic.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "NoirPro-Bold";
+	src: url("./fonts/NoirPro-Bold.eot");
+	src: url("./fonts/NoirPro-Bold.eot?#iefix") format("embedded-opentype"),
+		url("./fonts/NoirPro-Bold.woff") format("woff"),
+		url("./fonts/NoirPro-Bold.woff2") format("woff2"),
+		url("./fonts/NoirPro-Bold.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "NoirPro-Medium";
+	src: url("./fonts/NoirPro-Medium.eot");
+	src: url("./fonts/NoirPro-Medium.eot?#iefix") format("embedded-opentype"),
+		url("./fonts/NoirPro-Medium.woff") format("woff"),
+		url("./fonts/NoirPro-Medium.woff2") format("woff2"),
+		url("./fonts/NoirPro-Medium.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}

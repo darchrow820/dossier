@@ -1,17 +1,34 @@
 // fonts
 
+// @mixin r {
+// 	font-family: "Raleway Regular", sans-serif;
+// 	font-weight: 400;
+// }
+
+// @mixin b {
+// 	font-family: "Raleway Bold", sans-serif;
+// 	font-weight: 700;
+// }
+
+// @mixin t {
+// 	font-family: "Raleway Italic", sans-serif;
+// 	font-weight: 400;
+// 	font-style: italic;
+// }
+
 @mixin r {
-	font-family: "Raleway Regular", sans-serif;
-	font-weight: 400;
+	font-family: "NoirPro-Regular";
 }
 
 @mixin b {
-	font-family: "Raleway Bold", sans-serif;
-	font-weight: 700;
+	font-family: "NoirPro-Bold";
+}
+
+@mixin m {
+	font-family: "NoirPro-Medium";
 }
 
 @mixin t {
-	font-family: "Raleway Italic", sans-serif;
-	font-weight: 400;
+	font-family: "NoirPro-Italic";
 	font-style: italic;
 }

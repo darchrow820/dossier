@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Route, Routes, Navigate } from 'react-router-dom'
-import { publicRoutes, privateRoutes } from '../../routes';
-import { MAIN_ROUTE, LOGIN_ROUTE } from '../../consts';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { Context } from '../../index';
 
-import login from '../Login/login'
+import Login from '../Login/login'
+import Main from '../Main/main'
 
 const Approuter = () => {
-	const user = false;
+	const { auth } = useContext(Context)
+	const [user] = useAuthState(auth);
+	console.log(user);
+	// const user = false;
+
 	// return user ? (
 	// 	<Routes>
 	// 		{privateRoutes.map(({ path, Component }) =>
@@ -22,15 +27,13 @@ const Approuter = () => {
 	// );
 	return user ? (
 		<Routes>
-			{privateRoutes.map(({ path, Component }) =>
-				<Route path={path} element={Component} exact={true} />)}
-			<Route path="*" element={<Navigate to={MAIN_ROUTE} />} />
+			<Route path="/main" element={<Main />} />
+			<Route path="*" element={<Main />} />
 		</Routes>
 	) : (
 		<Routes>
-			{publicRoutes.map(({ path, Component }) =>
-				<Route path={path} element={Component} exact={true} />)}
-			<Route path="*" element={<Navigate to={LOGIN_ROUTE} />} />
+			<Route path="/login" element={<Login />} />
+			<Route path="*" element={<Login />} />
 		</Routes>
 	);
 }

@@ -1,0 +1,21 @@
+@import "../../mixin.scss";
+
+.login__wrap {
+	padding: 60px 0 40px 0;
+}
+
+.login__button {
+
+	@include m;
+	font-size: 18px;
+	line-height: 24px;
+	color: #fff;
+	width: 300px;
+	padding: 8px 0;
+	border: none;
+	border-radius: 8px;
+	background: #d70095;
+	display: block;
+	margin: 0 auto;
+	cursor: pointer;
+}
