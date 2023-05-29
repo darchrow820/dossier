@@ -49,10 +49,15 @@
 		outline: none;
 		background-color: #ff5a20;
 		cursor: pointer;
+		transition: all 0.3s ease-in-out;
 
 		position: absolute;
 		bottom: 100px;
 		left: calc(50% - 50px);
+
+		&.active {
+			transform: rotate(45deg);
+		}
 
 		&::after {
 			content: "+";

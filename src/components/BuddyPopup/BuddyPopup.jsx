@@ -3,10 +3,17 @@ import './Buddypopup.css'
 
 const BuddyPopup = (props) => {
 
-	const [active, setActive] = useState('')
+	const [active, setActive] = useState('');
+
+	console.log(props.activePopup);
+
 
 	const toggle = () => {
 		active === "active" ? setActive("") : setActive("active");
+
+		if (props.activePopup === false) {
+			setActive("");
+		}
 	}
 
 
@@ -15,7 +22,7 @@ const BuddyPopup = (props) => {
 			<div className={'buddyPopup__modal ' + active}>
 				{props.children}
 			</div>
-			<button className='buddyPopup__button' onClick={toggle}>
+			<button className={'buddyPopup__button ' + active} onClick={toggle}>
 			</button>
 		</div>
 	)
