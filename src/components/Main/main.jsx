@@ -8,6 +8,7 @@ import Button from '../Button/button'
 import Loader from '../Loader/Loader'
 import './Main.css'
 import BuddyPopup from '../BuddyPopup/BuddyPopup';
+import BuddyPage from '../BuddyPage/buddyPage';
 
 const Main = () => {
 
@@ -23,6 +24,18 @@ const Main = () => {
 	const [messages, loading] = useCollectionData(
 		firestore.collection('messages').orderBy('createdAt')
 	)
+
+	// const [buddies] = useCollectionData(
+	// 	firestore.collectionGroup('users')
+	// )
+	const [buddies] = useCollectionData(
+		firestore.collection('users').doc(user.uid).collection('buddies')
+	)
+
+	console.log(messages);
+	console.log(buddies);
+
+
 
 	const [activePopup, setActivePopup] = useState("");
 
@@ -50,6 +63,7 @@ const Main = () => {
 			if (docSnapshot.exists) {
 				usersRef.onSnapshot((doc) => {
 					// do stuff with the data
+					console.log(doc);
 				});
 			} else {
 				usersRef.set({
@@ -59,32 +73,7 @@ const Main = () => {
 			}
 		});
 
-	// const createUser = async () => {
-	// 	firestore.collection('users').add({
-	// 		uid: user.uid,
-	// 		displayName: user.displayName,
-	// 		createdAt: firebase.firestore.FieldValue.serverTimestamp()
-	// 	})
-	// }
-
-	// createUser();
-
-	// const setBuddy = async () => {
-
-	// 	if (buddyName.length || buddySurname.length || buddyFathername.length) {
-
-	// 		firestore.collection("buddies").add({
-	// 			name: buddyName,
-	// 			surname: buddySurname,
-	// 			fathername: buddyFathername,
-	// 		})
-	// 	}
-
-	// 	setBuddyName("")
-	// 	setBuddySurname("")
-	// 	setBuddyFathername("")
-	// }
-
+	console.log("usersRef: " + user.uid);
 
 
 	const setBuddy = async () => {
@@ -100,7 +89,6 @@ const Main = () => {
 		}
 
 		setActivePopup(false);
-		// console.log(activePopup);
 		setBuddyName("")
 		setBuddySurname("")
 		setBuddyFathername("")
@@ -110,6 +98,8 @@ const Main = () => {
 	return (
 		<div className='main'>
 			{/* <Addbuddy value={value} onChange={e => setValue(e.target.value)} placeholder={"Имя"} /> */}
+
+			<BuddyPage buddies={buddies} />
 
 			<BuddyPopup activePopup={activePopup}>
 				<BuddyInput value={buddyName} onChange={e => setBuddyName(e.target.value)} placeholder={"Имя"} />

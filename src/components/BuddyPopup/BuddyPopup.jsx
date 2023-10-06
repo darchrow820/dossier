@@ -11,9 +11,9 @@ const BuddyPopup = (props) => {
 	const toggle = () => {
 		active === "active" ? setActive("") : setActive("active");
 
-		if (props.activePopup === false) {
-			setActive("");
-		}
+		// if (props.activePopup === false) {
+		// 	setActive("");
+		// }
 	}
 
 

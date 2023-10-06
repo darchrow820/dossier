@@ -4,10 +4,12 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { Context } from '../../index';
 
 import Login from '../Login/login'
-import Main from '../Main/Main'
+import Main from '../Main/main'
 
 const Approuter = () => {
-	const { auth } = useContext(Context)
+	const { auth } = useContext(Context);
+	console.log(auth);
+
 	const [user] = useAuthState(auth);
 	console.log(user);
 	// const user = false;

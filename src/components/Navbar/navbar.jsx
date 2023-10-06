@@ -14,7 +14,7 @@ const Navbar = () => {
 		<div className={s.navbar}>
 			<div className={s.navbar__login}>
 				{user ?
-					<Button name={"Выйти"} className={s.navbar__button} onButtonClick={() => auth.signOut()}></Button>
+					<Button name={"Выйти"} className={s.navbar__button} onClick={() => auth.signOut()}></Button>
 					:
 					<Link to="/login">
 						<Button name={"Логин"} className={s.navbar__button}></Button>
