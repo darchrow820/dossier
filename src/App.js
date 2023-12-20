@@ -1,4 +1,5 @@
 // import logo from './logo.svg';
+import './normalize.css';
 import './App.scss';
 import './fonts.css';
 import React, { useContext } from 'react'
@@ -8,7 +9,10 @@ import { Context } from './index';
 import Navbar from './components/Navbar/navbar'
 import Approuter from './components/AppRouter/Approuter'
 import Search from './components/Search/search';
-import Loader from './components/Loader/Loader'
+import Loader from './components/Loader/Loader';
+import './fonts/Raleway-Italic.ttf'
+import './fonts/Raleway-Bold.ttf'
+import './fonts/Raleway-Regular.ttf'
 
 function App() {
 
